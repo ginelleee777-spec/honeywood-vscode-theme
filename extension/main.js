@@ -1,7 +1,8 @@
 'use strict';
-// Honeywood's only runtime code: a one-time, opt-in offer to switch to
-// Honeywood Icons after choosing a Honeywood colour theme, plus two setup
-// commands. It never changes a setting unless the user clicks or runs a command.
+// Honeywood's runtime code: a one-time, opt-in offer to switch to Honeywood
+// Icons after choosing a Honeywood colour theme, two setup commands, and the
+// optional Storybook view (storybook.js). It never changes a setting unless
+// the user clicks or runs a command.
 const vscode = require('vscode');
 const prompt = require('./icon-prompt');
 
@@ -35,6 +36,14 @@ async function useHoneywoodIcons() {
 }
 
 function activate(context) {
+  // The optional Storybook view is independent: if it fails to start, the
+  // themes and the icon offer below still work.
+  try {
+    require('./storybook').register(context);
+  } catch (err) {
+    console.error('Honeywood: the Storybook view could not start.', err);
+  }
+
   const getState = () => context.globalState.get(prompt.STATE_KEY, {});
   const setState = (state) => context.globalState.update(prompt.STATE_KEY, state);
   context.globalState.setKeysForSync([prompt.STATE_KEY]);

@@ -1,0 +1,441 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" class="hw-scene" role="img" aria-label="Honeywood woodland: four friends, a bear cub, a hare, a dormouse and a wildcat kitten, sit together under a big oak beside a river with a little wooden bridge, bees and daisies.">
+  <!-- Honeywood default storybook scene. Original artwork, hand-written SVG
+       made for Honeywood from basic shapes and gradients. The four woodland
+       friends (Bramble, Willow, Pip and Tansy) are original Honeywood
+       characters. No tracing, references to existing illustrations, or
+       third-party artwork. See docs/STORYBOOK-ILLUSTRATION.md.
+       Layers carry class names so the Storybook view can animate them with
+       CSS; the file has no scripts, styles or links of its own. -->
+  <defs>
+    <linearGradient id="hw-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CBE0F3"/>
+      <stop offset="0.55" stop-color="#E3EEF8"/>
+      <stop offset="1" stop-color="#FBF1DE"/>
+    </linearGradient>
+    <radialGradient id="hw-sunglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF4C9" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFF4C9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hw-hill-far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D6E6CD"/>
+      <stop offset="1" stop-color="#C3D9B8"/>
+    </linearGradient>
+    <linearGradient id="hw-bank-far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D3E5C8"/>
+      <stop offset="1" stop-color="#BCD5AE"/>
+    </linearGradient>
+    <linearGradient id="hw-bank-near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CFE3C2"/>
+      <stop offset="1" stop-color="#AFCC9F"/>
+    </linearGradient>
+    <linearGradient id="hw-river" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C4DCF0"/>
+      <stop offset="1" stop-color="#9DC0E2"/>
+    </linearGradient>
+    <radialGradient id="hw-leaf" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#DCEBD0"/>
+      <stop offset="1" stop-color="#A9C89C"/>
+    </radialGradient>
+    <radialGradient id="hw-leaf-deep" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#BFD7B1"/>
+      <stop offset="1" stop-color="#8FB083"/>
+    </radialGradient>
+    <linearGradient id="hw-bark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#BE9468"/>
+      <stop offset="1" stop-color="#8F6B4B"/>
+    </linearGradient>
+    <linearGradient id="hw-honey" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6DB8C"/>
+      <stop offset="1" stop-color="#E2B458"/>
+    </linearGradient>
+    <radialGradient id="hw-bear" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#DDA66C"/>
+      <stop offset="1" stop-color="#B07A45"/>
+    </radialGradient>
+    <radialGradient id="hw-hare" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#CBC5CF"/>
+      <stop offset="1" stop-color="#9B94A3"/>
+    </radialGradient>
+    <radialGradient id="hw-mouse" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#DDAA98"/>
+      <stop offset="1" stop-color="#B27C6B"/>
+    </radialGradient>
+    <radialGradient id="hw-cat" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#DDBC8A"/>
+      <stop offset="1" stop-color="#B38A58"/>
+    </radialGradient>
+    <radialGradient id="hw-stone" cx="0.4" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#D4D1C6"/>
+      <stop offset="1" stop-color="#A9A598"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky, sun and drifting clouds -->
+  <g class="hw-sky">
+    <rect x="0" y="0" width="480" height="600" fill="url(#hw-sky)"/>
+    <ellipse cx="120" cy="70" rx="140" ry="40" fill="#FFFFFF" opacity="0.25"/>
+    <ellipse cx="330" cy="200" rx="160" ry="34" fill="#FFF9F0" opacity="0.35"/>
+    <circle class="hw-sunglow" cx="398" cy="86" r="70" fill="url(#hw-sunglow)"/>
+    <circle cx="398" cy="86" r="27" fill="#FBE5A2"/>
+    <circle cx="390" cy="78" r="12" fill="#FFF1C4" opacity="0.7"/>
+    <g class="hw-cloud hw-cloud-a">
+      <path d="M268 58 q4 -18 24 -15 q10 -16 30 -7 q20 -3 22 13 q14 3 9 15 h-80 q-12 -1 -5 -6 z" fill="#FFFFFF" opacity="0.92"/>
+    </g>
+    <g class="hw-cloud hw-cloud-b">
+      <path d="M338 150 q3 -12 17 -10 q7 -11 21 -5 q14 -2 15 9 q10 2 6 10 h-56 q-8 -1 -3 -4 z" fill="#FFFFFF" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- A bird that glides across the sky now and then -->
+  <g transform="translate(-40 118)">
+    <g class="hw-bird">
+      <path d="M0 0 q6 -6 12 0 q6 -6 12 0" fill="none" stroke="#6B5B4E" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Distant hills and little trees -->
+  <g class="hw-far">
+    <path d="M0 304 C60 262 130 270 200 282 C260 292 320 256 400 260 C440 262 468 270 480 276 V330 H0 Z" fill="url(#hw-hill-far)"/>
+    <g fill="#B9D1AE">
+      <ellipse cx="318" cy="262" rx="11" ry="14"/>
+      <ellipse cx="338" cy="258" rx="9" ry="12"/>
+      <ellipse cx="420" cy="262" rx="12" ry="15"/>
+      <ellipse cx="452" cy="268" rx="9" ry="12"/>
+    </g>
+    <path d="M318 276 v8 M338 270 v10 M420 277 v8 M452 280 v6" stroke="#9C8166" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Far bank (right of the river) -->
+  <g class="hw-bank-far">
+    <path d="M272 284 C330 286 420 282 480 290 V552 C410 474 330 432 346 384 C364 344 296 318 272 284 Z" fill="url(#hw-bank-far)"/>
+    <g fill="#A9C79C" opacity="0.5">
+      <ellipse cx="420" cy="330" rx="40" ry="9"/>
+      <ellipse cx="452" cy="420" rx="30" ry="8"/>
+      <ellipse cx="380" cy="372" rx="24" ry="6"/>
+    </g>
+  </g>
+
+  <!-- Near bank (left of the river) -->
+  <g class="hw-bank-near">
+    <path d="M0 292 C70 286 170 290 248 284 C232 318 292 340 262 382 C234 424 290 480 318 600 H0 Z" fill="url(#hw-bank-near)"/>
+    <g fill="#9CBF8C" opacity="0.45">
+      <ellipse cx="70" cy="452" rx="60" ry="12"/>
+      <ellipse cx="200" cy="470" rx="46" ry="9"/>
+      <ellipse cx="110" cy="586" rx="90" ry="14"/>
+    </g>
+  </g>
+
+  <!-- The winding river, with flowing highlights and soft ripples -->
+  <g class="hw-river">
+    <path d="M248 284 C232 318 292 340 262 382 C234 424 290 480 318 600 H480 V552 C410 474 330 432 346 384 C364 344 296 318 272 284 Z" fill="url(#hw-river)"/>
+    <path d="M262 290 C254 316 300 340 286 380 C270 420 300 470 320 520" fill="none" stroke="#E2EEF8" stroke-width="7" opacity="0.6" stroke-linecap="round"/>
+    <g fill="none" stroke="#F6FAFD" stroke-linecap="round">
+      <path class="hw-flow hw-flow-a" d="M260 296 C252 318 294 340 282 372 C266 410 296 452 318 500 C332 532 352 560 370 600" stroke-width="2.4"/>
+      <path class="hw-flow hw-flow-b" d="M300 420 C318 456 360 490 400 530 C420 552 440 576 452 600" stroke-width="2"/>
+      <path class="hw-flow hw-flow-c" d="M330 470 C352 498 380 520 420 548" stroke-width="1.6"/>
+    </g>
+    <g class="hw-glints" fill="#FFFFFF">
+      <ellipse class="hw-glint hw-glint-a" cx="300" cy="442" rx="6" ry="1.6"/>
+      <ellipse class="hw-glint hw-glint-b" cx="372" cy="520" rx="7" ry="1.8"/>
+      <ellipse class="hw-glint hw-glint-c" cx="282" cy="340" rx="5" ry="1.4"/>
+    </g>
+  </g>
+
+  <!-- Little wooden bridge, with its soft reflection -->
+  <g class="hw-bridge">
+    <path d="M250 372 Q308 344 366 372" fill="none" stroke="#7E6250" stroke-width="3" opacity="0.18"/>
+    <path d="M246 364 Q308 328 370 364" fill="none" stroke="#5B4B3F" stroke-width="11" stroke-linecap="round"/>
+    <path d="M246 364 Q308 328 370 364" fill="none" stroke="#DDB98F" stroke-width="7.5" stroke-linecap="round"/>
+    <path d="M258 365 l1 -4 M272 359 l1 -4 M286 354 l1 -4 M300 351 l1 -4 M314 351 l1 -4 M328 353 l1 -4 M342 357 l1 -4 M356 362 l1 -4" stroke="#B58E66" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M258.4 357.5 v-16 M283.2 348.9 v-16 M308 346 v-16 M332.8 348.9 v-16 M357.6 357.5 v-16" stroke="#5B4B3F" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M258.4 341.5 Q308 312 357.6 341.5" fill="none" stroke="#5B4B3F" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M258.4 341.5 Q308 312 357.6 341.5" fill="none" stroke="#DDB98F" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Far-bank plants: reeds that sway -->
+  <g class="hw-reeds">
+    <g class="hw-sway hw-sway-3"><path d="M402 512 q-4 -30 2 -52" fill="none" stroke="#7FA36F" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="404" cy="456" rx="3.4" ry="9" fill="#A8805A"/></g>
+    <g class="hw-sway hw-sway-1"><path d="M416 506 q2 -32 -2 -58" fill="none" stroke="#7FA36F" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="414" cy="444" rx="3.4" ry="9" fill="#A8805A"/></g>
+    <g class="hw-sway hw-sway-2"><path d="M430 512 q6 -22 2 -40" fill="none" stroke="#7FA36F" stroke-width="2.2" stroke-linecap="round"/></g>
+    <g class="hw-sway hw-sway-4"><path d="M444 520 q-6 -26 0 -46" fill="none" stroke="#7FA36F" stroke-width="2.2" stroke-linecap="round"/><ellipse cx="444" cy="470" rx="3" ry="8" fill="#A8805A"/></g>
+  </g>
+
+  <!-- The big oak -->
+  <g class="hw-oak">
+    <path d="M100 408 C110 362 114 322 108 282 C104 252 112 228 118 214 L152 214 C154 236 160 262 154 292 C150 330 154 372 170 408 C152 414 116 414 100 408 Z" fill="url(#hw-bark)" stroke="#5B4B3F" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M100 408 q-14 2 -22 -2 M170 408 q14 1 20 -4 M128 410 q0 6 -8 8" fill="none" stroke="#5B4B3F" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M122 250 q4 30 -2 60 M140 300 q6 34 2 70 M116 340 q-2 24 4 46" fill="none" stroke="#7A5A3E" stroke-width="1.4" opacity="0.55" stroke-linecap="round"/>
+    <ellipse cx="136" cy="328" rx="8" ry="11" fill="#5E4634"/>
+    <ellipse cx="136" cy="331" rx="5" ry="7" fill="#46352A"/>
+    <!-- branch to the beehive -->
+    <path d="M150 292 C176 278 200 266 232 258" fill="none" stroke="#5B4B3F" stroke-width="11" stroke-linecap="round"/>
+    <path d="M150 292 C176 278 200 266 232 258" fill="none" stroke="#A98159" stroke-width="7.5" stroke-linecap="round"/>
+    <g class="hw-canopy hw-canopy-back">
+      <circle cx="40" cy="172" r="70" fill="url(#hw-leaf-deep)"/>
+      <circle cx="218" cy="166" r="60" fill="url(#hw-leaf-deep)"/>
+      <circle cx="130" cy="96" r="72" fill="url(#hw-leaf-deep)"/>
+    </g>
+    <g class="hw-canopy hw-canopy-front">
+      <circle cx="72" cy="122" r="60" fill="url(#hw-leaf)"/>
+      <circle cx="188" cy="112" r="56" fill="url(#hw-leaf)"/>
+      <circle cx="128" cy="60" r="50" fill="url(#hw-leaf)"/>
+      <circle cx="32" cy="218" r="46" fill="url(#hw-leaf)"/>
+      <circle cx="226" cy="214" r="44" fill="url(#hw-leaf)"/>
+      <circle cx="132" cy="176" r="70" fill="url(#hw-leaf)"/>
+      <g fill="#EEF5E6" opacity="0.55">
+        <ellipse cx="104" cy="74" rx="16" ry="7"/>
+        <ellipse cx="170" cy="94" rx="14" ry="6"/>
+        <ellipse cx="54" cy="104" rx="12" ry="5"/>
+        <ellipse cx="120" cy="150" rx="18" ry="7"/>
+        <ellipse cx="210" cy="196" rx="12" ry="5"/>
+      </g>
+      <g fill="#8FB083" opacity="0.6">
+        <ellipse cx="88" cy="200" rx="14" ry="6"/>
+        <ellipse cx="170" cy="226" rx="16" ry="6"/>
+        <ellipse cx="40" cy="244" rx="12" ry="5"/>
+        <ellipse cx="146" cy="128" rx="10" ry="4"/>
+      </g>
+      <path d="M100 116 l-4 -5 M100 116 l4 -5 M100 116 v-7 M155 68 l-4 -5 M155 68 l4 -5 M155 68 v-7 M195 138 l-4 -5 M195 138 l4 -5 M195 138 v-7 M64 174 l-4 -5 M64 174 l4 -5 M64 174 v-7 M133 212 l-4 -5 M133 212 l4 -5 M133 212 v-7 M228 224 l-4 -5 M228 224 l4 -5 M228 224 v-7 M40 140 l-4 -5 M40 140 l4 -5 M40 140 v-7 M176 180 l-4 -5 M176 180 l4 -5 M176 180 v-7" fill="none" stroke="#6F9468" stroke-width="1.3" stroke-linecap="round" opacity="0.7"/>
+      <g fill="#E0C19A" stroke="#5B4B3F" stroke-width="1">
+        <ellipse cx="70" cy="252" rx="4" ry="5"/>
+        <ellipse cx="200" cy="246" rx="4" ry="5"/>
+      </g>
+      <g fill="#A98159">
+        <path d="M66 248 q4 -4 8 0 z"/>
+        <path d="M196 242 q4 -4 8 0 z"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Beehive with honeycomb cells -->
+  <g class="hw-hive" stroke="#5B4B3F" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M226 258 v10" fill="none"/>
+    <path d="M211 298 C209 278 217 268 226 268 C235 268 243 278 241 298 Z" fill="url(#hw-honey)"/>
+    <path d="M213.5 279 h25 M211.4 288 h29.2" fill="none" stroke-width="1.2"/>
+    <path d="M220 296 q6 -9 12 0 z" fill="#5B4B3F"/>
+    <g fill="#F8E5A8" stroke="#D3A24A" stroke-width="0.9">
+      <path d="M218 270 l3 1.7 v3.4 l-3 1.7 l-3 -1.7 v-3.4 z"/>
+      <path d="M226 270 l3 1.7 v3.4 l-3 1.7 l-3 -1.7 v-3.4 z"/>
+      <path d="M234 270 l3 1.7 v3.4 l-3 1.7 l-3 -1.7 v-3.4 z"/>
+    </g>
+    <path d="M236 298 q1 5 -1 8" fill="none" stroke="#E2B458" stroke-width="2.4"/>
+  </g>
+
+  <!-- Flowers by the oak that the bees visit -->
+  <g class="hw-bee-flowers">
+    <g class="hw-sway hw-sway-2"><path d="M196 424 q-1 -10 1 -18" fill="none" stroke="#6F9468" stroke-width="1.6"/><g transform="translate(197 404)"><circle r="3.6" cy="-4.4" fill="#FFF9F0"/><circle r="3.6" cy="4.4" fill="#FFF9F0"/><circle r="3.6" cx="-4.4" fill="#FFF9F0"/><circle r="3.6" cx="4.4" fill="#FFF9F0"/><circle r="2.8" fill="#F2C95E"/></g></g>
+    <g class="hw-sway hw-sway-4"><path d="M214 428 q2 -8 0 -15" fill="none" stroke="#6F9468" stroke-width="1.6"/><g transform="translate(214 410)"><circle r="3" cy="-3.6" fill="#F4D9E1"/><circle r="3" cy="3.6" fill="#F4D9E1"/><circle r="3" cx="-3.6" fill="#F4D9E1"/><circle r="3" cx="3.6" fill="#F4D9E1"/><circle r="2.3" fill="#F2C95E"/></g></g>
+    <path d="M180 430 q4 -10 8 0 M222 432 q3 -8 6 0" fill="none" stroke="#6F9468" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Mossy stones by the water -->
+  <g class="hw-stones">
+    <ellipse cx="186" cy="516" rx="24" ry="11" fill="url(#hw-stone)" stroke="#5B4B3F" stroke-width="1.3"/>
+    <path d="M166 511 q20 -10 40 0 q-8 -4 -20 -4 q-12 0 -20 4 z" fill="#9EBF8C"/>
+    <ellipse cx="300" cy="544" rx="16" ry="8" fill="url(#hw-stone)" stroke="#5B4B3F" stroke-width="1.2"/>
+    <path d="M287 540 q13 -7 26 0 q-13 -3 -26 0 z" fill="#9EBF8C"/>
+    <ellipse cx="292" cy="570" rx="11" ry="6" fill="url(#hw-stone)" stroke="#5B4B3F" stroke-width="1.1"/>
+    <ellipse class="hw-ripple hw-ripple-a" cx="312" cy="552" rx="14" ry="3" fill="none" stroke="#F6FAFD" stroke-width="1.2"/>
+    <ellipse class="hw-ripple hw-ripple-b" cx="304" cy="578" rx="11" ry="2.5" fill="none" stroke="#F6FAFD" stroke-width="1.1"/>
+  </g>
+
+  <!-- The four friends, sitting together beside the river -->
+  <g class="hw-friends" stroke="#5B4B3F" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- Willow, a gentle grey hare with a heather sprig -->
+    <g class="hw-friend hw-willow" transform="translate(58 530)">
+      <ellipse cx="0" cy="1" rx="34" ry="5" fill="#6F8F62" opacity="0.25" stroke="none"/>
+      <g class="hw-breathe hw-breathe-2">
+        <circle cx="-27" cy="-20" r="6.5" fill="#F7F4F0"/>
+        <ellipse cx="-8" cy="-20" rx="22" ry="19" fill="url(#hw-hare)"/>
+        <ellipse cx="-10" cy="-3" rx="17" ry="4.6" fill="#B4ADB9"/>
+        <ellipse cx="4" cy="-36" rx="16" ry="25" fill="url(#hw-hare)"/>
+        <ellipse cx="9" cy="-34" rx="9" ry="16" fill="#F3EFEA" stroke="none"/>
+        <ellipse cx="11" cy="-6" rx="5" ry="4" fill="#ECE7EE"/>
+        <ellipse cx="2" cy="-6" rx="5" ry="4" fill="#ECE7EE"/>
+      </g>
+      <g class="hw-head hw-willow-head">
+        <g class="hw-ear hw-willow-ear">
+          <path d="M0 -74 C-8 -94 -10 -112 -4 -116 C3 -114 9 -96 8 -77 Z" fill="url(#hw-hare)"/>
+          <path d="M1 -78 C-3 -94 -4 -106 -2 -110 C2 -106 5 -94 5 -80 Z" fill="#EBC3CC" stroke="none"/>
+        </g>
+        <path d="M9 -77 C12 -96 20 -108 28 -106 C32 -103 22 -91 16 -75 Z" fill="url(#hw-hare)"/>
+        <path d="M12 -80 C15 -94 21 -102 26 -103 C24 -96 18 -88 15 -79 Z" fill="#EBC3CC" stroke="none"/>
+        <ellipse cx="11" cy="-64" rx="15" ry="13" fill="url(#hw-hare)"/>
+        <ellipse cx="19" cy="-58" rx="7" ry="5" fill="#F3EFEA" stroke="none"/>
+        <ellipse cx="24" cy="-61" rx="2" ry="1.6" fill="#D98C99" stroke="none"/>
+        <path d="M24 -58 q-2 3 -5 2" fill="none" stroke-width="1"/>
+        <circle cx="15" cy="-67" r="2.5" fill="#3B302A" stroke="none"/>
+        <circle cx="15.8" cy="-67.8" r="0.8" fill="#FFFFFF" stroke="none"/>
+        <ellipse opacity="0" class="hw-blink hw-blink-2" cx="15" cy="-67" rx="3.4" ry="3.2" fill="#B9B2BE" stroke="none"/>
+        <ellipse cx="10" cy="-60" rx="3.4" ry="2" fill="#E9A9B0" opacity="0.45" stroke="none"/>
+        <path d="M28 -59 l8 -2 M28 -57 l8 1" fill="none" stroke-width="0.8" opacity="0.7"/>
+        <g stroke="none">
+          <circle cx="2" cy="-77" r="2.2" fill="#B28CC0"/>
+          <circle cx="-1" cy="-80" r="1.9" fill="#C7A6D3"/>
+          <circle cx="4" cy="-81" r="1.7" fill="#B28CC0"/>
+        </g>
+        <path d="M3 -74 l-4 -8" fill="none" stroke="#6F9468" stroke-width="1.2"/>
+      </g>
+    </g>
+
+    <!-- Bramble, a toasted-caramel bear cub with a sage scarf -->
+    <g class="hw-friend hw-bramble" transform="translate(122 534)">
+      <ellipse cx="0" cy="1" rx="34" ry="5" fill="#6F8F62" opacity="0.25" stroke="none"/>
+      <g class="hw-breathe hw-breathe-1">
+        <path d="M-26 -8 C-30 -40 -18 -55 0 -55 C18 -55 30 -40 26 -8 C18 0 -18 0 -26 -8 Z" fill="url(#hw-bear)"/>
+        <ellipse cx="0" cy="-24" rx="14" ry="16" fill="#EDC896" stroke="none" opacity="0.85"/>
+        <ellipse cx="-19" cy="-29" rx="7" ry="13" fill="url(#hw-bear)" transform="rotate(18 -19 -29)"/>
+        <ellipse cx="19" cy="-29" rx="7" ry="13" fill="url(#hw-bear)" transform="rotate(-18 19 -29)"/>
+        <ellipse cx="-16" cy="-6" rx="11" ry="8" fill="url(#hw-bear)"/>
+        <ellipse cx="16" cy="-6" rx="11" ry="8" fill="url(#hw-bear)"/>
+        <ellipse cx="-16" cy="-6" rx="6" ry="4.6" fill="#F1D3A9" stroke="none"/>
+        <ellipse cx="16" cy="-6" rx="6" ry="4.6" fill="#F1D3A9" stroke="none"/>
+        <path d="M-21 -54 Q0 -45 21 -54 L21 -47 Q0 -38 -21 -47 Z" fill="#9DBB92"/>
+        <path d="M9 -48 l5 17 l8 -2 l-4 -16 z" fill="#9DBB92"/>
+        <path d="M-12 -50 v5 M-2 -47 v6 M8 -48 v6 M12 -38 l6 -1.5" fill="none" stroke="#F2D27A" stroke-width="1.6"/>
+      </g>
+      <g class="hw-head hw-bramble-head">
+        <circle cx="-17" cy="-88" r="8" fill="url(#hw-bear)"/>
+        <circle cx="17" cy="-88" r="8" fill="url(#hw-bear)"/>
+        <circle cx="-17" cy="-88" r="4.4" fill="#E7B98A" stroke="none"/>
+        <circle cx="17" cy="-88" r="4.4" fill="#E7B98A" stroke="none"/>
+        <circle cx="0" cy="-71" r="22" fill="url(#hw-bear)"/>
+        <ellipse cx="0" cy="-63" rx="10.5" ry="8" fill="#F1D3A9" stroke="none"/>
+        <ellipse cx="0" cy="-67" rx="4.2" ry="3.1" fill="#4A3F37" stroke="none"/>
+        <path d="M0 -64 v3 q-3 3 -6 1 M0 -61 q3 3 6 1" fill="none" stroke-width="1.1"/>
+        <circle cx="-8" cy="-75" r="2.5" fill="#3B302A" stroke="none"/>
+        <circle cx="8" cy="-75" r="2.5" fill="#3B302A" stroke="none"/>
+        <circle cx="-7.2" cy="-75.8" r="0.8" fill="#FFFFFF" stroke="none"/>
+        <circle cx="8.8" cy="-75.8" r="0.8" fill="#FFFFFF" stroke="none"/>
+        <ellipse opacity="0" class="hw-blink hw-blink-1" cx="-8" cy="-75" rx="3.4" ry="3.2" fill="#C8925A" stroke="none"/>
+        <ellipse opacity="0" class="hw-blink hw-blink-1" cx="8" cy="-75" rx="3.4" ry="3.2" fill="#C8925A" stroke="none"/>
+        <ellipse cx="-13" cy="-66" rx="4" ry="2.4" fill="#E9A28F" opacity="0.45" stroke="none"/>
+        <ellipse cx="13" cy="-66" rx="4" ry="2.4" fill="#E9A28F" opacity="0.45" stroke="none"/>
+      </g>
+    </g>
+
+    <!-- A little leaf of honeycomb, shared between friends -->
+    <g class="hw-picnic" transform="translate(158 552)">
+      <path d="M-16 0 C-10 -9 10 -9 16 0 C10 6 -10 6 -16 0 Z" fill="#A9C79C"/>
+      <path d="M-14 0 h28" fill="none" stroke="#6F9468" stroke-width="1"/>
+      <g fill="#F6DB8C" stroke="#C9963F" stroke-width="0.9">
+        <path d="M-6 -6 l3 1.7 v3.4 l-3 1.7 l-3 -1.7 v-3.4 z"/>
+        <path d="M0 -6 l3 1.7 v3.4 l-3 1.7 l-3 -1.7 v-3.4 z"/>
+        <path d="M-3 -10.5 l3 1.7 v3.4 l-3 1.7 l-3 -1.7 v-3.4 z"/>
+      </g>
+    </g>
+
+    <!-- Pip, a tiny rosy-brown dormouse in an acorn-cup hat, on a mossy stone -->
+    <g class="hw-friend hw-pip" transform="translate(186 508)">
+      <g class="hw-tail hw-pip-tail">
+        <path d="M-8 -6 C-30 -4 -36 -26 -24 -32 C-15 -36 -12 -25 -18 -23" fill="none" stroke="#5B4B3F" stroke-width="7.5"/>
+        <path d="M-8 -6 C-30 -4 -36 -26 -24 -32 C-15 -36 -12 -25 -18 -23" fill="none" stroke="#C99482" stroke-width="5"/>
+      </g>
+      <g class="hw-breathe hw-breathe-3">
+        <ellipse cx="0" cy="-14" rx="13" ry="14" fill="url(#hw-mouse)"/>
+        <ellipse cx="2" cy="-12" rx="7.5" ry="8.5" fill="#F6E3D6" stroke="none"/>
+        <ellipse cx="-6" cy="-1" rx="5.5" ry="3" fill="#E7B9A9"/>
+        <ellipse cx="7" cy="-1" rx="5.5" ry="3" fill="#E7B9A9"/>
+        <path d="M5 -13 q5 -6 7 -13" fill="none" stroke="#6F9468" stroke-width="1.3"/>
+        <g transform="translate(12 -27)" stroke="none"><circle r="2.2" cy="-2.6" fill="#FFF9F0"/><circle r="2.2" cy="2.6" fill="#FFF9F0"/><circle r="2.2" cx="-2.6" fill="#FFF9F0"/><circle r="2.2" cx="2.6" fill="#FFF9F0"/><circle r="1.7" fill="#F2C95E"/></g>
+        <ellipse cx="4" cy="-14" rx="3.2" ry="2.6" fill="#E7B9A9"/>
+      </g>
+      <g class="hw-head hw-pip-head">
+        <circle cx="-8" cy="-42" r="7.5" fill="url(#hw-mouse)"/>
+        <circle cx="12" cy="-42" r="7.5" fill="url(#hw-mouse)"/>
+        <circle cx="-8" cy="-42" r="4.4" fill="#EEB9AE" stroke="none"/>
+        <circle cx="12" cy="-42" r="4.4" fill="#EEB9AE" stroke="none"/>
+        <circle cx="2" cy="-32" r="11" fill="url(#hw-mouse)"/>
+        <path d="M-6 -41 C-4 -48 8 -48 10 -41 Z" fill="#A98159"/>
+        <path d="M2 -47 v-4" fill="none" stroke-width="1.6"/>
+        <path d="M-5 -42.5 l14 0" fill="none" stroke="#8A6643" stroke-width="0.8"/>
+        <circle cx="-2" cy="-33" r="2.7" fill="#3B302A" stroke="none"/>
+        <circle cx="7" cy="-33" r="2.7" fill="#3B302A" stroke="none"/>
+        <circle cx="-1.2" cy="-33.9" r="0.9" fill="#FFFFFF" stroke="none"/>
+        <circle cx="7.8" cy="-33.9" r="0.9" fill="#FFFFFF" stroke="none"/>
+        <ellipse opacity="0" class="hw-blink hw-blink-3" cx="-2" cy="-33" rx="3.5" ry="3.4" fill="#C8907F" stroke="none"/>
+        <ellipse opacity="0" class="hw-blink hw-blink-3" cx="7" cy="-33" rx="3.5" ry="3.4" fill="#C8907F" stroke="none"/>
+        <circle cx="2.5" cy="-28" r="1.6" fill="#C46F6F" stroke="none"/>
+        <path d="M-3 -28 l-8 -1 M-3 -26.5 l-8 1.5 M8 -28 l8 -1 M8 -26.5 l8 1.5" fill="none" stroke-width="0.7" opacity="0.7"/>
+      </g>
+    </g>
+
+    <!-- Tansy, a tawny wildcat kitten with a ringed, bushy tail -->
+    <g class="hw-friend hw-tansy" transform="translate(246 528)">
+      <ellipse cx="0" cy="1" rx="26" ry="4.6" fill="#6F8F62" opacity="0.25" stroke="none"/>
+      <g class="hw-tail hw-tansy-tail">
+        <path d="M12 -5 C34 -6 42 -24 36 -40" fill="none" stroke="#5B4B3F" stroke-width="12.5"/>
+        <path d="M12 -5 C34 -6 42 -24 36 -40" fill="none" stroke="#CDA672" stroke-width="10"/>
+        <path d="M12 -5 C34 -6 42 -24 36 -40" fill="none" stroke="#7C5A3A" stroke-width="10" stroke-dasharray="4 8" stroke-linecap="butt"/>
+        <circle cx="36" cy="-41" r="5" fill="#5E4634" stroke="none"/>
+      </g>
+      <g class="hw-breathe hw-breathe-4">
+        <path d="M-16 -4 C-20 -30 -12 -46 0 -46 C12 -46 20 -30 16 -4 C8 0 -8 0 -16 -4 Z" fill="url(#hw-cat)"/>
+        <ellipse cx="0" cy="-26" rx="8" ry="13" fill="#F3E3C6" stroke="none"/>
+        <path d="M-15 -26 q4 -2 6 2 M-16 -16 q4 -2 6 2 M15 -26 q-4 -2 -6 2 M16 -16 q-4 -2 -6 2" fill="none" stroke="#8B6A45" stroke-width="1.6" opacity="0.75"/>
+        <ellipse cx="-6" cy="-3" rx="5.5" ry="3.6" fill="#F3E3C6"/>
+        <ellipse cx="6" cy="-3" rx="5.5" ry="3.6" fill="#F3E3C6"/>
+      </g>
+      <g class="hw-head hw-tansy-head">
+        <path d="M-14 -62 L-13 -79 L-2 -68 Z" fill="url(#hw-cat)"/>
+        <path d="M14 -62 L13 -79 L2 -68 Z" fill="url(#hw-cat)"/>
+        <path d="M-11.5 -65 L-11 -74 L-5 -68 Z" fill="#E9B7AE" stroke="none"/>
+        <path d="M11.5 -65 L11 -74 L5 -68 Z" fill="#E9B7AE" stroke="none"/>
+        <ellipse cx="0" cy="-57" rx="16.5" ry="14" fill="url(#hw-cat)"/>
+        <path d="M-4 -70 v5 M0 -71 v6 M4 -70 v5" fill="none" stroke="#8B6A45" stroke-width="1.4"/>
+        <ellipse cx="0" cy="-50.5" rx="7.5" ry="5" fill="#F3E3C6" stroke="none"/>
+        <path d="M-2 -53.5 h4 l-2 2.4 z" fill="#D98C8C" stroke="none"/>
+        <path d="M0 -51 q-2.5 2.5 -5 1 M0 -51 q2.5 2.5 5 1" fill="none" stroke-width="1"/>
+        <ellipse cx="-6.5" cy="-58.5" rx="3" ry="2.4" fill="#A9BB6A" stroke="none"/>
+        <ellipse cx="6.5" cy="-58.5" rx="3" ry="2.4" fill="#A9BB6A" stroke="none"/>
+        <ellipse cx="-6.5" cy="-58.5" rx="1" ry="2" fill="#3B302A" stroke="none"/>
+        <ellipse cx="6.5" cy="-58.5" rx="1" ry="2" fill="#3B302A" stroke="none"/>
+        <ellipse opacity="0" class="hw-blink hw-blink-4" cx="-6.5" cy="-58.5" rx="3.8" ry="3.2" fill="#C9A06A" stroke="none"/>
+        <ellipse opacity="0" class="hw-blink hw-blink-4" cx="6.5" cy="-58.5" rx="3.8" ry="3.2" fill="#C9A06A" stroke="none"/>
+        <path d="M-8 -51 l-10 -1 M-8 -49.5 l-10 2 M8 -51 l10 -1 M8 -49.5 l10 2" fill="none" stroke-width="0.7" opacity="0.7"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Foreground grass, ferns and daisies -->
+  <g class="hw-foreground">
+    <g class="hw-sway hw-sway-1"><path d="M14 482 q-12 -16 -4 -34 M14 482 q-2 -20 10 -32 M14 482 q8 -14 22 -18" fill="none" stroke="#7FA36F" stroke-width="2.2" stroke-linecap="round"/></g>
+    <g class="hw-sway hw-sway-3"><path d="M232 590 q-2 -14 4 -22 M240 592 q2 -12 -2 -20" fill="none" stroke="#7FA36F" stroke-width="2" stroke-linecap="round"/></g>
+    <path d="M60 586 q2 -9 4 0 M66 586 q2 -11 4 0 M180 592 q2 -9 4 0 M330 470 q2 -9 4 0 M460 590 q2 -9 4 0" fill="none" stroke="#6F9468" stroke-width="1.6" stroke-linecap="round"/>
+    <g class="hw-sway hw-sway-2"><path d="M24 584 v-12" fill="none" stroke="#6F9468" stroke-width="1.5"/><g transform="translate(24 570)" stroke="#5B4B3F" stroke-width="0.9"><circle r="3.4" cy="-4.2" fill="#FFF9F0"/><circle r="3.4" cy="4.2" fill="#FFF9F0"/><circle r="3.4" cx="-4.2" fill="#FFF9F0"/><circle r="3.4" cx="4.2" fill="#FFF9F0"/><circle r="2.6" fill="#F2C95E"/></g></g>
+    <g class="hw-sway hw-sway-4"><path d="M46 594 v-10" fill="none" stroke="#6F9468" stroke-width="1.5"/><g transform="translate(46 582)" stroke="#5B4B3F" stroke-width="0.9"><circle r="3" cy="-3.7" fill="#F4D9E1"/><circle r="3" cy="3.7" fill="#F4D9E1"/><circle r="3" cx="-3.7" fill="#F4D9E1"/><circle r="3" cx="3.7" fill="#F4D9E1"/><circle r="2.3" fill="#F2C95E"/></g></g>
+    <g class="hw-sway hw-sway-1"><path d="M98 590 v-11" fill="none" stroke="#6F9468" stroke-width="1.5"/><g transform="translate(98 577)" stroke="#5B4B3F" stroke-width="0.9"><circle r="3.2" cy="-4" fill="#FFF9F0"/><circle r="3.2" cy="4" fill="#FFF9F0"/><circle r="3.2" cx="-4" fill="#FFF9F0"/><circle r="3.2" cx="4" fill="#FFF9F0"/><circle r="2.4" fill="#F2C95E"/></g></g>
+    <g class="hw-sway hw-sway-3"><path d="M208 586 v-10" fill="none" stroke="#6F9468" stroke-width="1.5"/><g transform="translate(208 574)" stroke="#5B4B3F" stroke-width="0.9"><circle r="3" cy="-3.7" fill="#FFF9F0"/><circle r="3" cy="3.7" fill="#FFF9F0"/><circle r="3" cx="-3.7" fill="#FFF9F0"/><circle r="3" cx="3.7" fill="#FFF9F0"/><circle r="2.3" fill="#F2C95E"/></g></g>
+    <g class="hw-sway hw-sway-2"><path d="M452 576 v-10" fill="none" stroke="#6F9468" stroke-width="1.5"/><g transform="translate(452 564)" stroke="#5B4B3F" stroke-width="0.9"><circle r="3" cy="-3.7" fill="#F4D9E1"/><circle r="3" cy="3.7" fill="#F4D9E1"/><circle r="3" cx="-3.7" fill="#F4D9E1"/><circle r="3" cx="3.7" fill="#F4D9E1"/><circle r="2.3" fill="#F2C95E"/></g></g>
+    <g class="hw-sway hw-sway-4"><path d="M440 420 v-10" fill="none" stroke="#6F9468" stroke-width="1.5"/><g transform="translate(440 408)" stroke="#5B4B3F" stroke-width="0.9"><circle r="2.8" cy="-3.4" fill="#FFF9F0"/><circle r="2.8" cy="3.4" fill="#FFF9F0"/><circle r="2.8" cx="-3.4" fill="#FFF9F0"/><circle r="2.8" cx="3.4" fill="#FFF9F0"/><circle r="2.1" fill="#F2C95E"/></g></g>
+  </g>
+
+  <!-- Bees around the hive; one visits the flowers -->
+  <g transform="translate(244 286)"><g class="hw-bee hw-bee-1">
+    <ellipse cx="-1" cy="-4" rx="3" ry="2" fill="#FFFFFF" opacity="0.85"/>
+    <ellipse cx="0" cy="0" rx="4.4" ry="3.2" fill="#F5D46A" stroke="#5B4B3F" stroke-width="1"/>
+    <path d="M-1 -3 v6 M1.6 -2.8 v5.6" stroke="#5B4B3F" stroke-width="1"/>
+  </g></g>
+  <g transform="translate(216 300)"><g class="hw-bee hw-bee-2">
+    <ellipse cx="-1" cy="-4" rx="3" ry="2" fill="#FFFFFF" opacity="0.85"/>
+    <ellipse cx="0" cy="0" rx="4.4" ry="3.2" fill="#F5D46A" stroke="#5B4B3F" stroke-width="1"/>
+    <path d="M-1 -3 v6 M1.6 -2.8 v5.6" stroke="#5B4B3F" stroke-width="1"/>
+  </g></g>
+  <g transform="translate(250 312)"><g class="hw-bee hw-bee-3">
+    <ellipse cx="-1" cy="-4" rx="3" ry="2" fill="#FFFFFF" opacity="0.85"/>
+    <ellipse cx="0" cy="0" rx="4.4" ry="3.2" fill="#F5D46A" stroke="#5B4B3F" stroke-width="1"/>
+    <path d="M-1 -3 v6 M1.6 -2.8 v5.6" stroke="#5B4B3F" stroke-width="1"/>
+  </g></g>
+
+  <!-- A butterfly that drifts past now and then -->
+  <g transform="translate(-30 452)"><g class="hw-butterfly">
+    <g class="hw-wings">
+      <ellipse cx="-4" cy="-3" rx="5" ry="4" fill="#F2DDE3" stroke="#5B4B3F" stroke-width="0.9"/>
+      <ellipse cx="4" cy="-3" rx="5" ry="4" fill="#F5E8B5" stroke="#5B4B3F" stroke-width="0.9"/>
+      <ellipse cx="-3" cy="3" rx="3.4" ry="2.8" fill="#F2DDE3" stroke="#5B4B3F" stroke-width="0.9"/>
+      <ellipse cx="3" cy="3" rx="3.4" ry="2.8" fill="#F5E8B5" stroke="#5B4B3F" stroke-width="0.9"/>
+    </g>
+    <path d="M0 -5 v10" stroke="#5B4B3F" stroke-width="1.4" stroke-linecap="round"/>
+  </g></g>
+</svg>
