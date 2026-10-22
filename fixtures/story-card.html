@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tonight's Story</title>
+    <style>
+      /* Paper card with a soft blue edge */
+      :root {
+        --paper: #fff9f0;
+        --edge: #dceaf7;
+      }
+      .story-card {
+        max-width: 36rem;
+        padding: 1.5rem 2rem;
+        background: var(--paper);
+        border: 2px solid var(--edge);
+        border-radius: 12px;
+        font-family: Georgia, serif;
+      }
+      .story-card h1:hover {
+        color: #547a9f;
+        transition: color 0.2s ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="story-card" id="tonight" data-pages="12">
+      <h1>The Long Walk to the Bridge</h1>
+      <p>Bring a scarf &mdash; the wind is <em>brisk</em> today.</p>
+      <a href="./chapter-2.html" target="_self">Next chapter</a>
+    </article>
+  </body>
+</html>

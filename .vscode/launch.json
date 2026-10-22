@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Preview Storybook Grove (sample code)",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": ["--profile-temp", "--extensionDevelopmentPath=${workspaceFolder}", "${workspaceFolder}/fixtures"]
+    },
+    {
+      "name": "Preview Storybook Grove (icon gallery)",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": ["--profile-temp", "--extensionDevelopmentPath=${workspaceFolder}", "${workspaceFolder}/fixtures/icon-gallery"]
+    }
+  ]
+}

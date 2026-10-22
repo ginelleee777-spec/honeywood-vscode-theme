@@ -1,0 +1,80 @@
+{
+  "name": "honeywood-theme",
+  "displayName": "Honeywood: A Pastel Woodland Theme",
+  "description": "A calm, pastel light theme with cream pages, powder-blue chrome and hand-drawn woodland file icons — two syntax styles, Picture Book and Quiet Ink.",
+  "version": "1.0.0",
+  "publisher": "honeywood",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ginelleee777-spec/honeywood-vscode-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ginelleee777-spec/honeywood-vscode-theme/issues"
+  },
+  "homepage": "https://github.com/ginelleee777-spec/honeywood-vscode-theme#readme",
+  "private": true,
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "icon": "images/icon.png",
+  "keywords": [
+    "theme",
+    "light theme",
+    "pastel",
+    "cream",
+    "powder blue",
+    "storybook",
+    "woodland",
+    "cozy",
+    "file icons",
+    "icon theme"
+  ],
+  "galleryBanner": {
+    "color": "#DCEAF7",
+    "theme": "light"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Honeywood — Picture Book",
+        "uiTheme": "vs",
+        "path": "./themes/honeywood-picture-book.json"
+      },
+      {
+        "label": "Honeywood — Quiet Ink",
+        "uiTheme": "vs",
+        "path": "./themes/honeywood-quiet-ink.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "honeywood-icons",
+        "label": "Honeywood Icons",
+        "path": "./icons/honeywood-icon-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build-themes.mjs",
+    "validate": "node scripts/validate.mjs",
+    "preview": "node scripts/build-themes.mjs && node scripts/build-preview.mjs",
+    "check": "npm run build && npm run build:icons && npm run validate && npm test && npm run preview",
+    "vscode:preview": "powershell -ExecutionPolicy Bypass -File scripts/launch-preview.ps1",
+    "package:list": "vsce ls",
+    "preview:serve": "python -m http.server 5178 --bind 127.0.0.1 --directory preview/out",
+    "preview:batch": "node scripts/preview-batch.mjs",
+    "build:icons": "node scripts/build-icon-theme.mjs",
+    "test": "node scripts/test-icon-mappings.mjs",
+    "test:gallery": "node scripts/make-icon-gallery.mjs && node scripts/build-integration-preview.mjs",
+    "docs:icons": "node scripts/build-mapping-docs.mjs",
+    "package:local": "vsce package --no-rewrite-relative-links --out release/"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^4.0.0",
+    "shiki": "^3.23.0"
+  }
+}

@@ -1,0 +1,11 @@
+# Allowlist: exclude everything, then re-include only public package files.
+**
+!package.json
+!README.md
+!CHANGELOG.md
+!LICENSE
+!ARTWORK-LICENSE.md
+!themes/*.json
+!icons/honeywood-icon-theme.json
+!icons/svg/*.svg
+!images/icon.png
