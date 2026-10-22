@@ -32,13 +32,15 @@ ok(pkg.contributes.iconThemes[0].id === p.ICON_THEME_ID, "icon theme id in packa
 ok(pkg.main === "./extension/main.js", 'package.json "main" should be ./extension/main.js');
 ok(JSON.stringify(pkg.activationEvents) === JSON.stringify(["onStartupFinished"]), "activationEvents should be exactly onStartupFinished");
 const source = readFileSync(join(root, "extension/main.js"), "utf8");
-const registered = [...source.matchAll(/registerCommand\('([^']+)'/g)].map((m) => m[1]).sort();
+const storybookSource = readFileSync(join(root, "extension/storybook.js"), "utf8");
+const registered = [...(source + storybookSource).matchAll(/registerCommand\('([^']+)'/g)].map((m) => m[1]).sort();
 ok(JSON.stringify(registered) === JSON.stringify(pkg.contributes.commands.map((c) => c.command).sort()), "registered commands differ from contributed commands");
 const ignore = readFileSync(join(root, ".vscodeignore"), "utf8").split(/\r?\n/);
 for (const f of ["!extension/main.js", "!extension/icon-prompt.js"]) ok(ignore.includes(f), `.vscodeignore must include ${f}`);
 // Only the user's explicit choice may change the icon theme.
 const updates = [...source.matchAll(/update\(\s*'iconTheme'/g)].length;
 ok(updates === 1 && /async function useHoneywoodIcons/.test(source), "iconTheme must be written in exactly one place (useHoneywoodIcons)");
+ok(!/iconTheme|colorTheme/.test(storybookSource), "the Storybook view must not touch the colour or icon theme");
 ok(!/configurationDefaults/.test(JSON.stringify(pkg.contributes)), "no configurationDefaults: never override the icon theme silently");
 
 // --- First-time setup

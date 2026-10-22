@@ -2,7 +2,23 @@
 
 All notable changes to Honeywood are documented here.
 
-## [1.1.0] — Unreleased
+## [1.2.0] — Unreleased
+
+### Added
+
+- **Honeywood Storybook**, an optional illustration panel in the Explorer. It starts collapsed below your files, and you can open, resize or hide it like any Explorer section.
+  - It shows an original, gently animated Honeywood woodland scene. Four woodland friends (Bramble the bear cub, Willow the hare, Pip the dormouse and Tansy the wildcat kitten) sit beside a river under a big oak, with a beehive, a little bridge and daisies. Bees drift, the water flows, leaves sway, and the friends breathe and blink. Everything moves slowly and quietly.
+  - **Honeywood: Pause Storybook Animation** and **Resume Storybook Animation**, plus a setting to turn the animation off. The scene is always still when your system or VS Code asks for reduced motion.
+  - **Honeywood: Choose Sidebar Illustration** shows a picture of your own instead (PNG, JPEG, WebP, GIF, AVIF or BMP). **Honeywood: Use Default Illustration** switches back, and **Honeywood: Show Storybook** opens the panel.
+  - Settings for an optional caption, and for showing the whole picture or filling the panel.
+  - If a chosen picture is missing, unreadable or not a valid image, the panel shows the woodland scene with a short explanation.
+- Privacy: only the picture's path is stored, in your user settings, and it isn't synced. The picture is never copied, uploaded or sent anywhere, and the panel loads nothing from the internet.
+
+### Changed
+
+- Honeywood now prefers to run on your local machine in remote windows, so a chosen picture refers to a file on your own computer.
+
+## [1.1.0]
 
 ### Added
 

@@ -1,6 +1,6 @@
 # Developing Honeywood
 
-Honeywood is almost entirely declarative. The only runtime code is the small opt-in offer to switch to Honeywood Icons, plus two setup commands (`extension/`). Everything else that ships is generated from a few small sources and is checked automatically before packaging.
+Honeywood is almost entirely declarative. The only runtime code (`extension/`) is the small opt-in offer to switch to Honeywood Icons, two setup commands, and the optional Honeywood Storybook view. Everything else that ships is generated from a few small sources and is checked automatically before packaging.
 
 ## Project layout
 
@@ -12,6 +12,9 @@ Honeywood is almost entirely declarative. The only runtime code is the small opt
 | `src/icon-map.mjs` | Icon mappings: folder names, file names, extensions and language IDs |
 | `extension/main.js` | Runtime code: the one-time Honeywood Icons offer and the setup commands |
 | `extension/icon-prompt.js` | When to offer the icons (pure rules, tested by `scripts/test-icon-prompt.mjs`) |
+| `extension/storybook.js` | The optional Honeywood Storybook Explorer view and its commands |
+| `extension/storybook-image.js`, `extension/storybook-html.js` | Checks a chosen picture, and builds the view's HTML and security policy (pure, tested by `scripts/test-storybook.mjs`) |
+| `images/storybook/honeywood-woodland.svg` | The default Storybook illustration (artwork; see `docs/STORYBOOK-ILLUSTRATION.md`) |
 | `scripts/build-themes.mjs` | Generates `themes/honeywood-*.json` |
 | `scripts/build-icon-theme.mjs` | Copies approved icon artwork into `icons/svg/` and writes `icons/honeywood-icon-theme.json` |
 | `scripts/validate.mjs` | About 1,700 checks: JSON, manifest, contrast on every editor surface, colour distinctness, SVG safety, mapping integrity, byte-identity with approved art |

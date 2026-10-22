@@ -2,7 +2,7 @@
   "name": "honeywood-theme",
   "displayName": "Honeywood: A Pastel Woodland Theme",
   "description": "A calm, pastel light theme with cream pages, powder-blue chrome and hand-drawn woodland file icons — two syntax styles, Picture Book and Quiet Ink.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "publisher": "honeywood",
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
@@ -38,11 +38,135 @@
     "theme": "light"
   },
   "main": "./extension/main.js",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
   "activationEvents": [
     "onStartupFinished"
   ],
   "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "honeywood.storybook",
+          "name": "Honeywood Storybook",
+          "visibility": "collapsed",
+          "when": "!isWeb"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "honeywood.storybook.chooseIllustration",
+          "when": "view == honeywood.storybook",
+          "group": "navigation"
+        },
+        {
+          "command": "honeywood.storybook.pauseAnimation",
+          "when": "view == honeywood.storybook && config.honeywood.storybook.animation",
+          "group": "1_illustration@2"
+        },
+        {
+          "command": "honeywood.storybook.resumeAnimation",
+          "when": "view == honeywood.storybook && !config.honeywood.storybook.animation",
+          "group": "1_illustration@2"
+        },
+        {
+          "command": "honeywood.storybook.useDefault",
+          "when": "view == honeywood.storybook",
+          "group": "1_illustration@1"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "honeywood.storybook.pauseAnimation",
+          "when": "config.honeywood.storybook.animation"
+        },
+        {
+          "command": "honeywood.storybook.resumeAnimation",
+          "when": "!config.honeywood.storybook.animation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Honeywood",
+      "properties": {
+        "honeywood.storybook.imagePath": {
+          "type": "string",
+          "default": "",
+          "scope": "machine",
+          "markdownDescription": "Full path to a local image shown in the **Honeywood Storybook** view (PNG, JPEG, WebP, GIF, AVIF or BMP, up to 50 MB). Leave empty for the animated Honeywood woodland scene. Use **Honeywood: Choose Sidebar Illustration** to pick a file. Stored for this computer only and not synced."
+        },
+        "honeywood.storybook.caption": {
+          "type": "string",
+          "default": "",
+          "maxLength": 80,
+          "description": "Optional short caption shown under the Storybook illustration."
+        },
+        "honeywood.storybook.fit": {
+          "type": "string",
+          "enum": [
+            "whole",
+            "fill"
+          ],
+          "enumDescriptions": [
+            "Show the whole illustration, as large as the view allows.",
+            "Fill the view, cropping the illustration's edges if needed. Useful for wide pictures in a tall sidebar."
+          ],
+          "default": "whole",
+          "description": "How the illustration fits the Honeywood Storybook view."
+        },
+        "honeywood.storybook.focus": {
+          "type": "string",
+          "enum": [
+            "center",
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ],
+          "default": "center",
+          "description": "With \"fill\", which part of the illustration stays in view when it is cropped."
+        },
+        "honeywood.storybook.animation": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Gently animate the built-in woodland scene (bees, water, leaves and the friends). Turn off for a still picture. The scene is also still when your system or `#workbench.reduceMotion#` asks for reduced motion. Pictures you choose are never animated by Honeywood."
+        }
+      }
+    },
     "commands": [
+      {
+        "command": "honeywood.storybook.show",
+        "title": "Show Storybook",
+        "category": "Honeywood"
+      },
+      {
+        "command": "honeywood.storybook.chooseIllustration",
+        "title": "Choose Sidebar Illustration",
+        "category": "Honeywood",
+        "icon": "$(file-media)"
+      },
+      {
+        "command": "honeywood.storybook.useDefault",
+        "title": "Use Default Illustration",
+        "category": "Honeywood"
+      },
+      {
+        "command": "honeywood.storybook.pauseAnimation",
+        "title": "Pause Storybook Animation",
+        "category": "Honeywood",
+        "icon": "$(debug-pause)"
+      },
+      {
+        "command": "honeywood.storybook.resumeAnimation",
+        "title": "Resume Storybook Animation",
+        "category": "Honeywood",
+        "icon": "$(play)"
+      },
       {
         "command": "honeywood.setUp",
         "title": "Set Up Colours and Icons",
@@ -84,7 +208,7 @@
     "preview:serve": "python -m http.server 5178 --bind 127.0.0.1 --directory preview/out",
     "preview:batch": "node scripts/preview-batch.mjs",
     "build:icons": "node scripts/build-icon-theme.mjs",
-    "test": "node scripts/test-icon-mappings.mjs && node scripts/test-icon-prompt.mjs",
+    "test": "node scripts/test-icon-mappings.mjs && node scripts/test-icon-prompt.mjs && node scripts/test-storybook.mjs",
     "test:gallery": "node scripts/make-icon-gallery.mjs && node scripts/build-integration-preview.mjs",
     "docs:icons": "node scripts/build-mapping-docs.mjs",
     "package:local": "vsce package --no-rewrite-relative-links --out release/"

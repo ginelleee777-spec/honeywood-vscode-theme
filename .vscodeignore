@@ -7,6 +7,10 @@
 !ARTWORK-LICENSE.md
 !extension/main.js
 !extension/icon-prompt.js
+!extension/storybook.js
+!extension/storybook-image.js
+!extension/storybook-html.js
+!images/storybook/honeywood-woodland.svg
 !themes/*.json
 !icons/honeywood-icon-theme.json
 !icons/svg/*.svg
