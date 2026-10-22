@@ -5,6 +5,8 @@
 !CHANGELOG.md
 !LICENSE
 !ARTWORK-LICENSE.md
+!extension/main.js
+!extension/icon-prompt.js
 !themes/*.json
 !icons/honeywood-icon-theme.json
 !icons/svg/*.svg

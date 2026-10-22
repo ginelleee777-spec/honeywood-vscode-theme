@@ -2,7 +2,18 @@
 
 All notable changes to Honeywood are documented here.
 
-## [1.0.0] — Unreleased
+## [1.1.0] — Unreleased
+
+### Added
+
+- After you choose a Honeywood colour theme, Honeywood asks once whether you'd like to use Honeywood Icons too. Your choices are **Use Honeywood Icons**, **Not now** (asks again after a week) or **Don't ask again**. Your file icon theme is never changed without your click, and switching between Picture Book and Quiet Ink doesn't ask again.
+- Commands **Honeywood: Set Up Colours and Icons** and **Honeywood: Use Honeywood Icons**.
+
+### Changed
+
+- Honeywood now includes a small amount of code for the offer above. It starts after VS Code has finished loading, does nothing unless a Honeywood colour theme is in use, and collects no data.
+
+## [1.0.0]
 
 First stable release.
 

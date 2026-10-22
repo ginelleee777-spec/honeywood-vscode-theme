@@ -31,14 +31,26 @@ Both colour themes share the same interface (cream editor; powder-blue sidebar, 
 
 1. In VS Code, open the Extensions view (`Ctrl+Shift+X`).
 2. Open the `…` menu and choose **Install from VSIX…**.
-3. Select `honeywood-theme-1.0.0.vsix`.
+3. Select `honeywood-theme-1.1.0.vsix`.
 
-**Selecting the themes:**
+## Setup
 
-- Colour theme: **File → Preferences → Theme → Color Theme** (`Ctrl+K Ctrl+T`), then choose **Honeywood — Picture Book** or **Honeywood — Quiet Ink**.
-- File icons: **File → Preferences → Theme → File Icon Theme**, then choose **Honeywood Icons**.
+1. **Choose a colour style.** After installing, VS Code opens the colour theme picker. Choose **Honeywood — Picture Book** or **Honeywood — Quiet Ink**. To change it later, use **File → Preferences → Theme → Color Theme** (`Ctrl+K Ctrl+T`).
+2. **Turn on the icons.** Honeywood then asks once whether you'd like the matching file icons:
+   - **Use Honeywood Icons** switches your file icon theme to Honeywood Icons.
+   - **Not now** asks again in a week, or the next time you choose a Honeywood colour theme after that.
+   - **Don't ask again** stops the question for good.
 
-The colour themes and the icon theme are independent, so you can use either one on its own.
+   If the message disappears before you answer, it's waiting under the bell icon in the bottom-right corner of VS Code.
+
+Honeywood never changes your file icon theme unless you click **Use Honeywood Icons** or run one of the commands below. Switching between Picture Book and Quiet Ink doesn't bring the question back.
+
+**Commands** (open the Command Palette with `Ctrl+Shift+P` and type "Honeywood"):
+
+- **Honeywood: Set Up Colours and Icons** lets you choose a colour style, and turns on Honeywood Icons too.
+- **Honeywood: Use Honeywood Icons** turns on the icons.
+
+You can also choose the icons yourself: **File → Preferences → Theme → File Icon Theme**, then **Honeywood Icons**. The colour themes and the icon theme are independent, so you can use either one on its own.
 
 ## Icon coverage
 
@@ -73,7 +85,7 @@ All colours, theme definitions and icon artwork in Honeywood were created for th
 
 Honeywood is licensed in two parts:
 
-- **Code: MIT License.** The colour theme definitions and colour palette, the icon mapping file, the build, test and preview scripts, the test fixtures and the documentation text. You may reuse, modify and redistribute this code under the terms in `LICENSE`.
+- **Code: MIT License.** The colour theme definitions and colour palette, the icon mapping file, the small setup code that offers the icons, the build, test and preview scripts, the test fixtures and the documentation text. You may reuse, modify and redistribute this code under the terms in `LICENSE`.
 - **Artwork: all rights reserved, with some permissions.** The original icon artwork, the Marketplace icon, the screenshots and the drawing scripts that generate the icons. `ARTWORK-LICENSE.md` lists the exact folders.
   - **Allowed:** using the extension for any purpose (including commercial), sharing the unmodified official package, showing it in screenshots and reviews, and building and testing it locally from source.
   - **On GitHub:** viewing and forking the repository is allowed, as GitHub's Terms of Service provide.

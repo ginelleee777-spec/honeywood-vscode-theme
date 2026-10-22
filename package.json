@@ -2,7 +2,7 @@
   "name": "honeywood-theme",
   "displayName": "Honeywood: A Pastel Woodland Theme",
   "description": "A calm, pastel light theme with cream pages, powder-blue chrome and hand-drawn woodland file icons — two syntax styles, Picture Book and Quiet Ink.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "honeywood",
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
@@ -37,7 +37,23 @@
     "color": "#DCEAF7",
     "theme": "light"
   },
+  "main": "./extension/main.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
+    "commands": [
+      {
+        "command": "honeywood.setUp",
+        "title": "Set Up Colours and Icons",
+        "category": "Honeywood"
+      },
+      {
+        "command": "honeywood.useIcons",
+        "title": "Use Honeywood Icons",
+        "category": "Honeywood"
+      }
+    ],
     "themes": [
       {
         "label": "Honeywood — Picture Book",
@@ -68,7 +84,7 @@
     "preview:serve": "python -m http.server 5178 --bind 127.0.0.1 --directory preview/out",
     "preview:batch": "node scripts/preview-batch.mjs",
     "build:icons": "node scripts/build-icon-theme.mjs",
-    "test": "node scripts/test-icon-mappings.mjs",
+    "test": "node scripts/test-icon-mappings.mjs && node scripts/test-icon-prompt.mjs",
     "test:gallery": "node scripts/make-icon-gallery.mjs && node scripts/build-integration-preview.mjs",
     "docs:icons": "node scripts/build-mapping-docs.mjs",
     "package:local": "vsce package --no-rewrite-relative-links --out release/"
