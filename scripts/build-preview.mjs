@@ -55,7 +55,8 @@ function decorations(code, needles) {
 
 let sampleHtml = "";
 for (const s of samples) {
-  const code = read(s.file).replace(/\n$/, "");
+  // Normalise Windows CRLF so the identical-code check compares text, not line endings.
+  const code = read(s.file).replace(/\r\n/g, "\n").replace(/\n$/, "");
   const cols = [];
   for (const t of themes) {
     const html = await codeToHtml(code, { lang: s.lang, theme: t.json, decorations: decorations(code, s.errors) });

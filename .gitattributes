@@ -1,0 +1,22 @@
+# Keep text files LF in the repository and in every checkout, on every OS
+# (overrides core.autocrlf), so generated files and preview checks match.
+* text=auto eol=lf
+
+# Binary files: never convert line endings or diff as text.
+*.png binary
+*.PNG binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.tgz binary
+*.7z binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.vsix binary
